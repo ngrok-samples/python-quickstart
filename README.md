@@ -25,7 +25,10 @@ A minimal Python app demonstrating the ngrok Python SDK.
    NGROK_AUTHTOKEN=your_actual_authtoken_here
    ```
 
-4. (Optional) Reserve a domain in the [ngrok dashboard](https://dashboard.ngrok.com/domains) and update the `domain` parameter in `example.py`.
+4. Reserve a domain in the [ngrok dashboard](https://dashboard.ngrok.com/domains) and add it to the `.env` file:
+   ```txt
+   NGROK_RESERVED_DOMAIN=your_actual_authtoken_here
+   ```
 
 ## Running the app
 
@@ -36,14 +39,14 @@ A minimal Python app demonstrating the ngrok Python SDK.
 
 2. In another terminal, start the ngrok agent endpoint:
    ```bash
-   python example.py
+   python endpoint.py
    ```
 
-The ngrok agent endpoint will output a URL that forwards traffic to your local app. If you configured OAuth, visitors will need to log in with Google to access it.
+The ngrok agent endpoint will output a URL that forwards traffic to your local app.
 
 ## Files
 
 - `service.py` - Basic Python HTTP server
-- `example.py` - ngrok agent endpoint configuration with OAuth
+- `endpoint.py` - ngrok agent endpoint configuration with OAuth
 - `.env.example` - Environment variable template
 - `requirements.txt` - Python dependencies

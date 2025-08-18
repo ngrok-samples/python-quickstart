@@ -9,7 +9,7 @@ listener = ngrok.forward(
 	# The port your app is running on.
   8080,
   authtoken=os.getenv("NGROK_AUTHTOKEN"),
-  domain="your-reserved-domain",
+  domain=os.getenv("NGROK_RESERVED_DOMAIN"),
 	# Secure your endpoint with a traffic policy.
 	# This could also be a path to a traffic policy file.
   traffic_policy='{"on_http_request": [{"actions": [{"type": "oauth","config": {"provider": "google"}}]}]}'
